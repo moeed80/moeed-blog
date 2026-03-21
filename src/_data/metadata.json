@@ -1,0 +1,12 @@
+{
+  "title": "Moeed's Blog",
+  "url": "https://moeed.com",
+  "language": "en",
+  "description": "My thoughts on media and politics.",
+  "author": {
+    "name": "Moeed Ahmad",
+    "email": "email@moeed.com"
+  },
+  "image": "/assets/social-image.jpg",
+  "feedUrl": "/feed.xml"
+}
