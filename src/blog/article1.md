@@ -5,7 +5,7 @@ date: 2009-02-01
 category: "cat1"
 ---
 
-The Gaza War of early 2009, known as Operation Cast Lead, was a watershed moment for our digital team. While Western media outlets were largely restricted from entering the strip, Al Jazeera had a distinct advantage: we were already there. While the conflict carried on, we realized the value of our footage was too significant to keep locked behind traditional copyright. We needed a way to get this ground-level context into the hands of the global community, from documentary filmmakers to citizen journalists.
+The Gaza War of early 2009, known as Operation Cast Lead, was a watershed moment for our digital team. While Western media outlets were largely restricted from entering the strip, Al Jazeera had a distinct advantage: we were already there. While the conflict carried on, we realized the value of our footage was too significant to keep locked behind traditional copyright. We needed a way to get this ground-level context into the hands of the global community, from documentary filmmakers to citizen journalists.1
 <!-- excerpt -->
 
 In January 2009, we officially launched the Al Jazeera Creative Commons Repository (http://cc.aljazeera.com), the first of its kind for a major news organization. We built the platform on Drupal and used blip.tv to host the videos, allowing users to download and repurpose high-quality broadcast footage under a 3.0 attribution license. The goal was simple: to democratize access to the news and ensure that the human stories we captured could be shared and verified by anyone, anywhere.
