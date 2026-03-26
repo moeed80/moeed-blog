@@ -5,8 +5,13 @@ layout: page
 <article class="article">
   <h1>{{ title }}</h1>
   <small>
-    Published: <time>{{ date | readableDate }}</time>
-    <a class="category" href="/blog/{{ category }}">{{ category }}</a>
-  </small>
+  Published: <time>{{ date | readableDate }}</time>
+  {% if category %}
+    {# We loop directly through the list provided by your Markdown #}
+    {% for cat in category %}
+      <a class="category" href="/blog/{{ cat | slugify }}">{{ cat }}</a>
+    {% endfor %}
+  {% endif %}
+</small>
   {{ content | safe }}
 </article>

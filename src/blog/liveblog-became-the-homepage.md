@@ -2,7 +2,8 @@
 layout: article
 title: 40% of the Story - When the Liveblog Became the Homepage
 date: 2011-06-04
-category: "cat1"
+category:
+ - Arab Spring
 ---
 
 By early 2011, the energy in our Doha newsrooms was electric. The Arab Spring wasn't just a regional political transformation; it was the moment the traditional news cycle finally collapsed. For decades, news was something you "waited" for—the evening broadcast or the morning paper. But as the uprisings in Tunisia and Egypt accelerated, our audience stopped waiting. They didn't want a curated summary; they wanted the pulse of the street in real-time.The data from that period was staggering. At the height of the uprisings, we realized that our liveblogs were carrying nearly 40% of all Al Jazeera English web traffic. The homepage, once the crown jewel and primary gatekeeper of any news organization, was being bypassed. People were landing directly on the live updates, staying for hours, and treating the stream of fragmented, verified reports as their primary source of truth.This shift signaled the death of "appointment viewing". 

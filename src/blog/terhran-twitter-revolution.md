@@ -2,7 +2,10 @@
 layout: article
 title: Tehran’s Summer of (Unverified) Discontent - The Reality of the "Twitter Revolution"
 date: 2009-07-15
-category: "cat2"
+category:
+  - Iran
+  - Twitter
+
 ---
 
 The summer of 2009 brought the world’s attention to the streets of Tehran. In the West, the narrative was quickly set: this was a "Twitter Revolution." Pundits were enamored with the idea that young Iranians, armed with smartphones, were tweeting their way to democracy. However, inside our newsroom, the view was much more sober. While the blogosphere was gorging on raw feeds, we were grappling with the "Tehran Summer" as a massive verification challenge.

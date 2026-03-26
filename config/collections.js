@@ -6,26 +6,33 @@ const getAllPosts = (collectionApi) => {
   .reverse()
 }
 
+// Helper function to handle both single strings and arrays of categories
+const getCategories = (item) => {
+  const cat = item.data.category;
+  if (!cat) return [];
+  return Array.isArray(cat) ? cat : [cat];
+};
+
 const getCategoryList = (collectionApi) => {
   const catPages = []
   let categories = []
   const blogPosts = collectionApi.getFilteredByGlob('./src/blog/*.md')
 
-  blogPosts.map((item) => {
-    categories.push(item.data.category)
+  blogPosts.forEach((item) => {
+    const itemCategories = getCategories(item);
+    categories.push(...itemCategories);
   })
 
   categories = categories.sort(sortAlphabetically)
-  const temp = [...new Set(categories)]
+  const uniqueCategories = [...new Set(categories)]
 
-  temp.forEach((category) => {
+  uniqueCategories.forEach((category) => {
     const slug = strToSlug(category);
     
     catPages.push({
       'key': slug,
       'name': category 
     })
-    
   })
 
   return catPages
@@ -35,19 +42,19 @@ const getCategorisedPosts = (collectionApi) => {
   const categorisedPosts = {}
 
   collectionApi.getFilteredByGlob('./src/blog/*.md').forEach(item => {
-    const category = item.data.category
+    const itemCategories = getCategories(item);
       
-    // Ignore the ones without a category
-    if (typeof category !== 'string')
-    return
+    itemCategories.forEach(category => {
+      if (typeof category !== 'string') return;
 
-    const slug = strToSlug(category)
+      const slug = strToSlug(category)
 
-    if (Array.isArray(categorisedPosts[slug])) {
-      categorisedPosts[slug].push(item)
-    } else {
-      categorisedPosts[slug] = [item]
-    }
+      if (Array.isArray(categorisedPosts[slug])) {
+        categorisedPosts[slug].push(item)
+      } else {
+        categorisedPosts[slug] = [item]
+      }
+    })
   })
 
   return categorisedPosts

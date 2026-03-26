@@ -2,6 +2,7 @@ import eleventyNavigationPlugin from "@11ty/eleventy-navigation"
 import pluginRss from "@11ty/eleventy-plugin-rss"
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img"
 import pluginIcons from "eleventy-plugin-icons"
+import embedYouTube from "eleventy-plugin-youtube-embed"
 
 import {
   getAllPosts,
@@ -31,6 +32,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(eleventyNavigationPlugin)
   eleventyConfig.addPlugin(pluginRss)
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, imageConfig)
+  eleventyConfig.addPlugin(embedYouTube)
 
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
