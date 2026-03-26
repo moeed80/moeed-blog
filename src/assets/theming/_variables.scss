@@ -1,20 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@400;700&display=swap');
+/* Font Imports */
+/* We're swapping Montagu Slab for Newsreader (Serif) and adding Inter (Sans) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,700;1,6..72,400&display=swap');
 
-$main-font: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
-$accent-font: 'Montagu Slab', serif;
+/* Font Variables */
+/* The design uses a clean Sans-Serif for body and a Serif for headings */
+$main-font: 'Inter', system-ui, -apple-system, sans-serif;
+$accent-font: 'Newsreader', serif;
 
-/* Colours */
-$light-shade: #E9EFC0;
-$dark-shade: #4E944F;
-$darkest-shade: darken($dark-shade, 17%);
-$accent-shade:#FF8C32;
+/* Colours - Based on Light Mode Design */
+$light-shade: #F2F1E8;    /* Main Cream Background */
+$card-bg:     #F9F8F3;    /* Slightly lighter for article cards */
+$dark-shade:  #2D3A30;    /* Dark Forest Green for accents/icons */
+$darkest-shade: #1A1A1A;  /* Soft Charcoal for main text */
+$muted-text:  #555555;    /* Grey for excerpts/dates */
+$border-clr:  #D9D7CB;    /* Subtle line color */
 
-/*========================================*/
-
-$base-clr: $darkest-shade;
-$bg-clr: lighten($light-shade, 7%);
-$link-clr: $darkest-shade;
-$link-hvr-clr: $accent-shade;
-$cat-clr: $darkest-shade;
-
-
+/* Variable Mapping */
+/* This ensures your existing styles update automatically */
+$base-clr:     $darkest-shade;
+$bg-clr:       $light-shade;
+$link-clr:     $dark-shade;
+$link-hvr-clr: lighten($dark-shade, 10%);
+$cat-clr:      $dark-shade;

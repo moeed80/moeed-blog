@@ -1,58 +1,48 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-  background-color: $bg-clr;
-  color: $base-clr;
+  background-color: $bg-clr; // This pulls from your #F2F1E8 cream
+  color: $base-clr;          // This pulls from your #1A1A1A charcoal
   font-family: $main-font;
-  font-size: 50%;
+  font-size: 62.5%;          // Sets 1rem to 10px for easier math
   scroll-behavior: smooth;
 
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-
-  @include breakpoint-md {
-    font-size: 62.5%;
-  }
 }
 
 body {
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  font-size: 2.25rem;
-  height: 100vh;
-  line-height: 140%;
-  min-width: 320px;
-  margin: 0 5em 0 1.5em;
-
-  @include breakpoint-md {
-    font-size: 1.8rem;
-  }
-
-  footer {
-    justify-self: flex-end;
-  }
+  min-height: 100vh;         // Changed from height: 100vh so content can grow
+  font-size: 1.8rem;         // Standard 18px body size
+  line-height: 1.6;
+  max-width: 900px;          // Matches the centered look of your design
+  margin: 0 auto;            // Centers the entire site
+  padding: 0 2rem;           // Padding for mobile screens
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $accent-font;
-  line-height: 140%;
-  margin: 0 0 0.7em 0;
+  color: $darkest-shade;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+  letter-spacing: -0.02em;   // Tight editorial spacing
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;           // Large heading like your "Welcome" text
+  margin-top: 2em;
 }
 
 a {
   color: $link-clr;
-  transition: color 400ms;
+  text-decoration: none;
+  transition: color 300ms ease;
 
   &:hover {
     color: $link-hvr-clr;
@@ -60,98 +50,44 @@ a {
 }
 
 p {
-  max-width: 600px;
-  + p {
-    margin-top: 1.5rem;
-  } 
+  margin-bottom: 1.5em;
+  max-width: 70ch;           // Optimal reading width
 }
 
-nav {
-  ul {
-    list-style: none;
-  }
-}
-
-main {
-  flex: 0 1 100%;
-  margin: 1em 0 2em 0;
-
-  &:not(nav) {
-    ul {
-      margin: .7em 0 .7em 1em;
-    }
-  }
-
-  nav {
-    span {
-      font-size: 2.2rem;
-      font-weight: 600;
-    }
-  }
-
-  nav ul {
-    margin: .2em 0 2em 0;
-  }
-}
-
-header,
-main,
-footer {
-  max-width: 1440px;
-}
-
-header,
-footer {
-  padding: 2em 0 .7em 0;
-}
+/* Layout Parts */
 
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
 }
 
-footer span {
-  font-weight: 600;
+main {
+  flex: 1;                   // Pushes footer to bottom
 }
 
-nav ul li {
-  display: inline-block;
-  font-size: 2rem;
-  
-  + li {
-    margin-left: 1.2rem;
-  }
-
-  &.active a {
-    font-weight: 600;
-    text-decoration: underline;
-  }
-
-  a {
-    display: inline-block;
-    text-decoration: none;
-    padding-bottom: 5px;
-    transition: color 400ms;
-  }
-}
-
-.sr-only {
-  border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  padding: 0 !important;
-  position: absolute !important;
-  width: 1px !important;
-  white-space: nowrap !important;
+footer {
+  padding: 4rem 0 2rem 0;
+  font-size: 1.4rem;
+  border-top: 1px solid $border-clr;
 }
 
 .logo {
   font-family: $accent-font;
   font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 1em;
+  font-size: 2.4rem;
+  color: $darkest-shade;
 }
 
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+
+  li a {
+    font-size: 1.6rem;
+    font-weight: 500;
+    font-family: $main-font;
+  }
+}
