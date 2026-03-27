@@ -1,5 +1,112 @@
+/* ==========================================================================
+   Blog List & Cards
+   ========================================================================== */
+
+.article__list {
+  display: grid !important;
+  // Forces the 2-column layout on desktop
+  grid-template-columns: repeat(2, 1fr) !important; 
+  gap: 3rem;
+  list-style: none !important; 
+  padding: 0 !important;
+  margin: 2rem 0 4rem !important;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 .article__item {
-  +.article__item {
-    margin-top: 1.5em;
+  border: 1px solid rgba(0, 0, 0, 0.1); 
+  border-radius: 20px; 
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $darkest-shade;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+
+  h2 {
+    font-size: 2.6rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    
+    a {
+      color: $darkest-shade;
+      text-decoration: none;
+      &:hover { color: $link-clr; }
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    color: $muted-text;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+    flex-grow: 1; 
+  }
+
+  small {
+    display: flex !important;
+    flex-direction: column !important; 
+    align-items: flex-start !important;
+    gap: 1.2rem;            
+    margin-top: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 2rem;
+    font-family: $main-font;
+    width: 100%;
+
+    .article__date {
+      font-size: 1.4rem;
+      color: $muted-text;
+      font-weight: 500;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1;
+    }
+
+    .article__tags {
+      display: flex !important;
+      flex-direction: row !important; 
+      flex-wrap: wrap !important;
+      justify-content: flex-start !important;
+      gap: 0.8rem !important;
+      width: 100%;
+      margin: 0 !important;
+      
+      // OPTICAL ALIGNMENT FIX:
+      // Pulls the tags left by the same amount as their internal padding (1.2rem)
+      // This makes the text of the tag line up with the text of the date.
+      margin-left: -1.2rem !important; 
+      padding: 0 !important;
+
+      // Prevents Markdown-generated <p> tags from breaking the layout
+      p { display: contents !important; }
+    }
+
+    .category {
+      display: inline-flex !important;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $darkest-shade;
+      text-decoration: none;
+      padding: 0.4rem 1.2rem; // The left/right padding is 1.2rem
+      border: 1px solid $border-clr;
+      border-radius: 6px;
+      line-height: 1;
+      white-space: nowrap;
+      background-color: transparent;
+
+      &:hover {
+        background-color: $darkest-shade;
+        color: #fff;
+      }
+    }
   }
 }

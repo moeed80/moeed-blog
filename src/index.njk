@@ -1,0 +1,23 @@
+---
+layout: page
+eleventyNavigation:
+  key: home
+  order: 1
+---
+
+<section class="hero">
+  <h1>Pivoting to Video<br />Since Before it Was a Threat</h1>
+  
+  <div class="hero__profile">
+    <div class="hero__avatar">
+      <img src="https://ui-avatars.com/api/?name=Moeed+Ahmad&background=2D3A30&color=fff" alt="Moeed Ahmad">
+    </div>
+    <h2 class="hero__blog-title">Blog</h2>
+  </div>
+</section>
+
+<div class="blog-grid-container">
+  {# We pull your blog posts from the 'blog' collection #}
+  {% set articles = collections.blog %}
+  {% include "components/articleList.njk" %}
+</div>
