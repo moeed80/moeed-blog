@@ -1,0 +1,61 @@
+---
+layout: page
+title: "Contact"
+eleventyNavigation:
+  key: contact
+  order: 3
+---
+
+<section class="contact">
+  <div class="contact__header">
+    {# This new wrapper creates the horizontal row for image + title #}
+    <div class="contact__header-top">
+      <div class="contact__avatar">
+        <img src="/assets/images/moeed-dark.jpg" alt="Moeed Ahmad">
+      </div>
+      <h1>
+        <span class="highlight">20</span> Years of Digital Transformation &<br />
+        <span class="highlight">Zero</span> Years of Using the Word 'Synergy'</h1>
+    </div>
+    <p class="contact__intro">
+      I’ve spent two decades navigating global newsrooms of Al Jazeera, from the Arab Spring to launching AJ+ in San Franscisco with the superbest of teams. <br />
+    </p>
+    <p class="contact__intro">
+      If there is one thing I’ve learned, it’s that most problems are solved by having ☕ over Sheesha, clear communication and fewer "strategy" meetings. 
+    </p>
+    <p class="contact__intro">
+      Whether you have a project in mind, a speaking request, or a technical fix for this site, please file the appropriate paperwork below.
+    </p>
+  </div>
+
+  <form action="https://api.web3forms.com/submit" method="POST" class="contact__form">
+    {# Your Web3Forms Access Key #}
+    <input type="hidden" name="access_key" value="e21ba6a8-e016-403b-aa50-7abefac00541">
+
+    {# Anti-Spam Honeypot (invisible to humans) #}
+    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+    {# Optional: Tell Web3Forms where to send the user after they click submit #}
+    {# <input type="hidden" name="redirect" value="https://moeed.com/contact/success"> #}
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Moeed Ahmad" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="moeed@example.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Please avoid terms like &quot;disruptor&quot; or &quot;paradigm shift&quot;. Just tell me what's on your mind." required></textarea>
+    </div>
+
+    <button type="submit" class="btn-submit">Dispatch</button>
+    <p class="contact__fine-print">
+      Please note: By clicking "Dispatch," you agree that this message contains 0% synergistic buzzwords. Submissions are processed based on chronological order or how much they pique my curiosity.
+    </p>
+  </form>
+</section>
