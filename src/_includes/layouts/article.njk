@@ -2,16 +2,30 @@
 layout: page
 ---
 
-<article class="article">
-  <h1>{{ title }}</h1>
-  <small>
-  Published: <time>{{ date | readableDate }}</time>
-  {% if category %}
-    {# We loop directly through the list provided by your Markdown #}
-    {% for cat in category %}
-      <a class="category" href="/blog/{{ cat | slugify }}">{{ cat }}</a>
-    {% endfor %}
-  {% endif %}
-</small>
-  {{ content | safe }}
+<article class="post">
+  <header class="post__header">
+    <h1>{{ title }}</h1>
+    
+    <div class="post__meta">
+      <span class="post__published-label">Published:</span>
+      <time class="post__date">{{ date | readableDate }}</time>
+      
+      {% if category %}
+        <span class="post__separator">•</span>
+        <div class="post__tags">
+          {% for cat in category %}
+            <a class="category" href="/blog/{{ cat | slugify }}">{{ cat }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="post__content">
+    {{ content | safe }}
+  </div>
+
+  <footer class="post__footer">
+    <a href="/blog" class="back-link">← Back to Blog</a>
+  </footer>
 </article>

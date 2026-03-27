@@ -24,6 +24,7 @@ body {
   padding: 0 2rem;
 }
 
+// Global Heading Styles
 h1, h2, h3, h4, h5, h6 {
   font-family: $accent-font;
   color: $darkest-shade;
@@ -32,11 +33,17 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
+// Global H1 - For pages like "Blog" or Category pages
+h1 {
+  font-size: clamp(3rem, 6vw, 4.5rem); 
+  line-height: 1.1;
+}
+
 p { margin-bottom: 1.5em; }
 a { color: $link-clr; text-decoration: none; transition: all 0.2s; }
 
 /* ==========================================================================
-   Header & Navigation (The Fix)
+   Header & Navigation
    ========================================================================== */
 
 .site-header {
@@ -44,7 +51,7 @@ a { color: $link-clr; text-decoration: none; transition: all 0.2s; }
   justify-content: space-between;
   align-items: baseline;
   padding: 2rem 0;        
-  margin-bottom: 0;       
+  margin-bottom: 5rem; // Consistent gap for all pages       
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
   .logo a {
@@ -52,6 +59,7 @@ a { color: $link-clr; text-decoration: none; transition: all 0.2s; }
     font-weight: 700;
     font-size: 2.4rem;
     color: $darkest-shade;
+    letter-spacing: -0.01em;
   }
 }
 
@@ -67,7 +75,7 @@ a { color: $link-clr; text-decoration: none; transition: all 0.2s; }
     font-size: 1.4rem;
     font-weight: 600;
     color: $muted-text;
-    text-transform: uppercase; // Fixes the lowercase issue
+    text-transform: uppercase; 
     letter-spacing: 0.1em;
     
     &.active {
@@ -87,13 +95,14 @@ a { color: $link-clr; text-decoration: none; transition: all 0.2s; }
 }
 
 /* ==========================================================================
-   Hero Section (Fixes Gap & Avatar)
+   Hero Section (Homepage Only)
    ========================================================================== */
 
 .hero {
-  padding: 3rem 0 2rem; // Fixes the huge gap
+  padding: 0 0 2rem; 
 
   h1 {
+    // Keeps the homepage title larger than standard H1s
     font-size: clamp(3.5rem, 8vw, 6.4rem); 
     line-height: 1.05;
     margin-bottom: 4rem;
@@ -110,25 +119,28 @@ a { color: $link-clr; text-decoration: none; transition: all 0.2s; }
   &__avatar {
     width: 80px; 
     height: 80px;
-    border-radius: 50% !important; // Fixes the square box
+    border-radius: 50% !important; 
     overflow: hidden;
     background-color: $darkest-shade;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 1.6rem;
-    font-weight: 600;
-    img { width: 100%; height: 100%; object-fit: cover; }
+    flex-shrink: 0;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    flex-shrink: 0;   // Prevents the circle from squishing on smaller screens
+
+    img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; 
+    }
   }
 
   &__blog-title {
-    font-size: 3.2rem; // Slightly larger to match the bigger photo
+    font-size: 3.2rem;
     font-weight: 700;
     margin: 0;
-    letter-spacing: -0.01em;}
+    letter-spacing: -0.01em;
+  }
 }
 
 /* ==========================================================================
@@ -139,6 +151,21 @@ a { color: $link-clr; text-decoration: none; transition: all 0.2s; }
   margin-top: 8rem;
   padding: 4rem 0;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
-  &__inner { display: flex; justify-content: space-between; align-items: center; }
-  .icon { width: 1.8rem; height: 1.8rem; fill: currentColor; }
+  
+  &__inner { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  .site-footer__info {
+    font-size: 1.4rem;
+    color: $muted-text;
+  }
+
+  .icon { 
+    width: 1.8rem; 
+    height: 1.8rem; 
+    fill: currentColor; 
+  }
 }

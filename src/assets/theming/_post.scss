@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Individual Post Styles
+   ========================================================================== */
+
+.post {
+  max-width: 720px; // The "Golden Width" for comfortable reading
+  margin: 0 auto 8rem;
+
+  &__header {
+    margin-bottom: 5rem;
+    text-align: left;
+
+    h1 {
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+      color: $darkest-shade;
+    }
+
+    .post__meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-family: $main-font;
+      font-size: 1.4rem;
+      color: $muted-text;
+      margin-top: 1rem;
+
+      .category {
+        font-size: 1.1rem;
+        padding: 0.2rem 0.8rem;
+        border-radius: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+
+  /* Markdown Content Styling */
+  &__content {
+    font-family: $main-font;
+    font-size: 1.9rem;
+    line-height: 1.75; // More space between lines for readability
+    color: rgba(0, 0, 0, 0.85);
+
+    p {
+      margin-bottom: 2.5rem;
+    }
+
+    h2, h3 {
+      margin: 5rem 0 2rem;
+      letter-spacing: -0.01em;
+    }
+
+    h2 { font-size: 3.2rem; }
+    h3 { font-size: 2.4rem; }
+
+    /* Elegant Blockquotes */
+    blockquote {
+      margin: 4rem 0;
+      padding-left: 3rem;
+      border-left: 3px solid $darkest-shade;
+      font-family: $accent-font;
+      font-style: italic;
+      font-size: 2.4rem;
+      line-height: 1.5;
+      color: $darkest-shade;
+
+      p { margin-bottom: 0; }
+    }
+
+    /* Lists */
+    ul, ol {
+      margin-bottom: 3rem;
+      padding-left: 2.5rem;
+      li { margin-bottom: 1rem; }
+    }
+
+    /* Images with Captions */
+    figure {
+      margin: 5rem -4rem; // Slightly wider than the text for an editorial look
+      
+      @media (max-width: 800px) {
+        margin: 4rem 0;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 8px;
+        display: block;
+      }
+
+      figcaption {
+        margin-top: 1.5rem;
+        font-size: 1.4rem;
+        text-align: center;
+        color: $muted-text;
+        font-style: italic;
+      }
+    }
+
+    /* Links inside text */
+    a {
+      text-decoration: underline;
+      text-decoration-color: rgba(0, 0, 0, 0.1);
+      text-underline-offset: 4px;
+      
+      &:hover {
+        text-decoration-color: $darkest-shade;
+        background-color: rgba(0, 0, 0, 0.03);
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: 8rem;
+    padding-top: 4rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    
+    .back-link {
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: $darkest-shade;
+    }
+  }
+}
