@@ -1,93 +1,144 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* ==========================================================================
+   Base Styles & Typography
+   ========================================================================== */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 html {
-  background-color: $bg-clr; // This pulls from your #F2F1E8 cream
-  color: $base-clr;          // This pulls from your #1A1A1A charcoal
+  background-color: $bg-clr;
+  color: $base-clr;
   font-family: $main-font;
-  font-size: 62.5%;          // Sets 1rem to 10px for easier math
+  font-size: 62.5%; 
   scroll-behavior: smooth;
-
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;         // Changed from height: 100vh so content can grow
-  font-size: 1.8rem;         // Standard 18px body size
+  min-height: 100vh;
+  font-size: 1.8rem;
   line-height: 1.6;
-  max-width: 900px;          // Matches the centered look of your design
-  margin: 0 auto;            // Centers the entire site
-  padding: 0 2rem;           // Padding for mobile screens
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $accent-font;
   color: $darkest-shade;
-  line-height: 1.2;
+  line-height: 1.1;
   margin-bottom: 0.5em;
-  letter-spacing: -0.02em;   // Tight editorial spacing
+  letter-spacing: -0.02em;
 }
 
-h1 {
-  font-size: 5rem;           // Large heading like your "Welcome" text
-  margin-top: 2em;
-}
+p { margin-bottom: 1.5em; }
+a { color: $link-clr; text-decoration: none; transition: all 0.2s; }
 
-a {
-  color: $link-clr;
-  text-decoration: none;
-  transition: color 300ms ease;
+/* ==========================================================================
+   Header & Navigation (The Fix)
+   ========================================================================== */
 
-  &:hover {
-    color: $link-hvr-clr;
-  }
-}
-
-p {
-  margin-bottom: 1.5em;
-  max-width: 70ch;           // Optimal reading width
-}
-
-/* Layout Parts */
-
-header {
+.site-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 3rem 0;
-}
+  align-items: baseline;
+  padding: 2rem 0;        
+  margin-bottom: 0;       
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 
-main {
-  flex: 1;                   // Pushes footer to bottom
-}
-
-footer {
-  padding: 4rem 0 2rem 0;
-  font-size: 1.4rem;
-  border-top: 1px solid $border-clr;
-}
-
-.logo {
-  font-family: $accent-font;
-  font-weight: 700;
-  font-size: 2.4rem;
-  color: $darkest-shade;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-
-  li a {
-    font-size: 1.6rem;
-    font-weight: 500;
-    font-family: $main-font;
+  .logo a {
+    font-family: $accent-font;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: $darkest-shade;
   }
+}
+
+.site-nav {
+  &__list {
+    display: flex;
+    list-style: none;
+    gap: 3rem;
+  }
+
+  &__link {
+    font-family: $main-font;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $muted-text;
+    text-transform: uppercase; // Fixes the lowercase issue
+    letter-spacing: 0.1em;
+    
+    &.active {
+      color: $darkest-shade;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $dark-shade;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Hero Section (Fixes Gap & Avatar)
+   ========================================================================== */
+
+.hero {
+  padding: 3rem 0 2rem; // Fixes the huge gap
+
+  h1 {
+    font-size: clamp(3.5rem, 8vw, 6.4rem); 
+    line-height: 1.05;
+    margin-bottom: 4rem;
+    margin-top: 0;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__avatar {
+    width: 80px; 
+    height: 80px;
+    border-radius: 50% !important; // Fixes the square box
+    overflow: hidden;
+    background-color: $darkest-shade;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    img { width: 100%; height: 100%; object-fit: cover; }
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;   // Prevents the circle from squishing on smaller screens
+  }
+
+  &__blog-title {
+    font-size: 3.2rem; // Slightly larger to match the bigger photo
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.01em;}
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  margin-top: 8rem;
+  padding: 4rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  &__inner { display: flex; justify-content: space-between; align-items: center; }
+  .icon { width: 1.8rem; height: 1.8rem; fill: currentColor; }
 }

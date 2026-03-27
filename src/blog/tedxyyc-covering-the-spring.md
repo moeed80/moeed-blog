@@ -2,10 +2,11 @@
 layout: article
 title: TEDxYYC - Covering The Spring
 date: 2012-07-10
+excerpt: "TEDx just posted the talk I gave in Calgary back in May on YouTube."
 category:
  - Arab Spring
 ---
-TEDx just posted the talk I gave in Calgary back in May. 
+TEDx just posted the talk I gave in Calgary back in May on YouTube. 
 <!-- excerpt -->
 
 

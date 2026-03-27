@@ -2,6 +2,7 @@
 layout: article
 title: War 2.0 Operation Cast Lead and the Al Jazeera Creative Commons Repository
 date: 2009-02-01
+excerpt: "The Gaza War of early 2009, known as Operation Cast Lead, was a watershed moment for our digital team. While Western media outlets were largely restricted from entering the strip ..."
 category: 
  - Palestine
 ---

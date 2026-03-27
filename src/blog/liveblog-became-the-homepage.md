@@ -2,6 +2,7 @@
 layout: article
 title: 40% of the Story - When the Liveblog Became the Homepage
 date: 2011-06-04
+excerpt: "By early 2011, the energy in our Doha newsrooms was electric. The Arab Spring wasn't just a regional political transformation; it was ..."
 category:
  - Arab Spring
 ---

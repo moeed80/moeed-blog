@@ -24,10 +24,9 @@ const imageConfig = {
   urlPath: "/images/",
 }
 
-
 export default function (eleventyConfig) {
   /*================================*/
-  /*   plugins and configurations   */
+  /* plugins and configurations   */
   /*================================*/
   eleventyConfig.addPlugin(eleventyNavigationPlugin)
   eleventyConfig.addPlugin(pluginRss)
@@ -36,39 +35,43 @@ export default function (eleventyConfig) {
 
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
-    excerpt_separator: "<!-- excerpt -->",
+    excerpt_separator: "",
     excerpt_alias: "excerpt",
   })
 
-    eleventyConfig.addPlugin(pluginIcons, {
-      sources: [{ name: "custom", path: "./src/assets/icons" }],
-    })
+  eleventyConfig.addPlugin(pluginIcons, {
+    sources: [{ name: "custom", path: "./src/assets/icons" }],
+  })
 
   /*===================================================*/
   /* files that need to be copied to the build folder  */
   /*===================================================*/
-  eleventyConfig.addPassthroughCopy("./src/assets/social-image.jpg")
-  eleventyConfig.addPassthroughCopy("./src/assets/icons")
-  eleventyConfig.addPassthroughCopy("./src/assets/sprite.svg")
+  // This line ensures your CSS, Icons, and Images all get copied correctly
+  eleventyConfig.addPassthroughCopy("./src/assets")
+  eleventyConfig.addPassthroughCopy("./src/images")
 
   /*=================*/
-  /*     Layouts     */
+  /* Layouts     */
   /*=================*/
   eleventyConfig.addLayoutAlias("page", "layouts/page")
   eleventyConfig.addLayoutAlias("article", "layouts/article")
 
   /*=================*/
-  /*   Collections   */
+  /* Collections   */
   /*=================*/
   eleventyConfig.addCollection("blog", getAllPosts)
   eleventyConfig.addCollection("categoryList", getCategoryList)
   eleventyConfig.addCollection("categorisedPosts", getCategorisedPosts)
 
   /*=================*/
-  /*     Filters     */
+  /* Filters     */
   /*=================*/
   eleventyConfig.addFilter("readableDate", readableDate)
 
+  // FIXED: Variable name matches the parameter (eleventyConfig)
+  eleventyConfig.addFilter("year", () => {
+    return new Date().getFullYear();
+  });
 
   return {
     dir: {

@@ -3,7 +3,10 @@
   <li class="article__item">
     <article class="article__preview">
       <h2><a href="{{ article.url | url }}">{{ article.data.title }}</a></h2>
-      <p>{{ article.data.excerpt }}</p>
+      
+      {# Fallback: checks for excerpt, then description, then summary #}
+      <p>{{ article.data.excerpt or article.data.description or article.data.summary }}</p>
+      
       <small>
         <time class="article__date">{{ article.data.date | readableDate }}</time>
         {%- if article.data.category -%}

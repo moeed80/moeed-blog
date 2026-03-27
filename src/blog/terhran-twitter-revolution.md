@@ -2,6 +2,7 @@
 layout: article
 title: Tehran’s Summer of (Unverified) Discontent - The Reality of the "Twitter Revolution"
 date: 2009-07-15
+excerpt: "The summer of 2009 brought the world’s attention to the streets of Tehran. In the West, the narrative was ..."
 category:
   - Iran
   - Twitter
