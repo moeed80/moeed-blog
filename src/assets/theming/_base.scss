@@ -169,3 +169,34 @@ a { color: $link-clr; text-decoration: none; transition: all 0.2s; }
     fill: currentColor; 
   }
 }
+
+/* ==========================================================================
+   Buttons & Links
+   ========================================================================== */
+
+.btn-submit {
+  display: inline-block; // Ensures it acts like a button
+  align-self: flex-start;
+  padding: 1.4rem 4rem;
+  background-color: $darkest-shade;
+  color: #fff !important; // Forces white text even if it's a link
+  border: none;
+  border-radius: 100px; 
+  font-weight: 600;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.1s, opacity 0.2s;
+
+  &:hover { 
+    opacity: 0.9; 
+    transform: translateY(-1px); 
+    color: #fff;
+  }
+  
+  &:active { 
+    transform: translateY(0); 
+  }
+}
