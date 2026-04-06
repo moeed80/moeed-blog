@@ -14,5 +14,8 @@ In January 2009, we officially launched the Al Jazeera Creative Commons Reposito
 
 This project wasn't just about sharing video; it was about shifting the role of the newsroom from a closed gatekeeper to an open resource. By releasing our "War on Gaza" coverage into the wild, we challenged the industry to rethink how media organizations interact with their audience. It was our first major step toward building a digitally native infrastructure that prioritized the free flow of information over proprietary control.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Orphanschoolmosque.jpg/500px-Orphanschoolmosque.jpg" alt="Destroyed building in Rafah, 12 January 2009" />
+<figure class="post__figure">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Orphanschoolmosque.jpg/500px-Orphanschoolmosque.jpg" alt="Destroyed building in Rafah, 12 January 2009" />
+  <figcaption>Destroyed building in Rafah, 12 January 2009.</figcaption>
+</figure>
 
