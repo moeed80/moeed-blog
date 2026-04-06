@@ -12,4 +12,7 @@ By early 2011, the energy in our Doha newsrooms was electric. The Arab Spring wa
 
 We saw our total viewership increase by over 250%, but the growth wasn't coming from people sitting down in front of a television at 6:00 PM. It was coming from global citizens glued to their browsers and mobile devices, engaging with a "social second screen" that blended professional reporting with raw citizen dispatches. Managing this surge required more than just server capacity; it required a new editorial philosophy. We had to move away from the "top-down" broadcast model and embrace a flatter, more interactive architecture. The newsroom was no longer just a megaphone; it had become a processing hub for a global, networked conversation that was moving faster than any traditional control room could handle. Looking back, 2011 was the year we proved that the broadcast signal was no longer the exclusive gatekeeper of reality. By putting the content where the people actually were—in the live stream and on the social web, we didn't just cover the revolution; we adapted to a revolutionary change in how the world consumes information.
 
-<img src="/assets/images/2011-01-21 moeed-morad-arab-spring.jpeg" alt="My colleague Morad and I working on the AJE Live Blog Drupal implementation on Jan 21, 2011" />
+<figure class="post__figure">
+  <img src="/assets/images/2011-01-21 moeed-morad-arab-spring.jpeg" alt="My colleague Morad and I working on the AJE Live Blog Drupal implementation on Jan 21, 2011" />
+  <figcaption>My colleague Morad and I working on the AJE Live Blog Drupal implementation, January 21, 2011.</figcaption>
+</figure>
