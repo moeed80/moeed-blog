@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="{{ metadata.language }}">
   <head>
+    <script>
+      (function () {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+      })();
+    </script>
     <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-786ZWBN1EQ"></script>
       <script>
@@ -25,5 +33,36 @@
       {{ content | safe }}
     </main>
     {% include "../components/footer.njk" %}
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var toggleButton = document.querySelector('[data-theme-toggle]');
+        if (!toggleButton) return;
+
+        var label = toggleButton.querySelector('[data-theme-toggle-label]');
+
+        var getResolvedTheme = function () {
+          if (root.dataset.theme === 'dark') return 'dark';
+          if (root.dataset.theme === 'light') return 'light';
+          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+
+        var updateToggle = function () {
+          var theme = getResolvedTheme();
+          var isDark = theme === 'dark';
+          toggleButton.setAttribute('aria-pressed', String(isDark));
+          if (label) label.textContent = isDark ? 'Light' : 'Dark';
+        };
+
+        toggleButton.addEventListener('click', function () {
+          var nextTheme = getResolvedTheme() === 'dark' ? 'light' : 'dark';
+          root.setAttribute('data-theme', nextTheme);
+          localStorage.setItem('theme', nextTheme);
+          updateToggle();
+        });
+
+        updateToggle();
+      })();
+    </script>
   </body>
 </html>

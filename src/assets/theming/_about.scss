@@ -24,8 +24,8 @@
       border-radius: 50% !important;
       overflow: hidden;
       flex-shrink: 0;
-      background-color: $darkest-shade;
-      border: 1px solid rgba(0, 0, 0, 0.05);
+      background-color: var(--color-accent-strong);
+      border: 1px solid var(--color-border-soft);
       
       img {
         width: 100%;
@@ -47,7 +47,7 @@
     figcaption {
       margin-top: 1.5rem;
       font-size: 1.4rem;
-      color: $muted-text;
+      color: var(--color-text-muted);
       text-align: center;
       font-style: italic;
     }
@@ -56,14 +56,14 @@
   &__intro {
     font-size: 2.1rem;
     line-height: 1.6;
-    color: $muted-text;
+    color: var(--color-text-muted);
     margin-bottom: 4rem;
   }
 
   &__content {
     font-size: 1.9rem;
     line-height: 1.75;
-    color: rgba(0, 0, 0, 0.85);
+    color: var(--color-content);
 
     p { margin-bottom: 2.5rem; }
 
@@ -73,7 +73,7 @@
       display: block;     // Prevents strange bottom spacing
       margin: 4rem 0;     // Adds breathing room above and below
       border-radius: 8px; // Matches your footer-cta and cards
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); // Subtle depth
+      box-shadow: 0 4px 20px var(--color-shadow-soft); // Subtle depth
     }
 
     h2 {

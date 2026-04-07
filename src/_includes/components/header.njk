@@ -4,17 +4,23 @@
     <a href="/">Moeed Ahmad</a>
   </div>
   
-  <nav class="site-nav" role="navigation" aria-label="main navigation">
-    <ul class="site-nav__list">
-      {%- for item in navItems %}
-        <li class="site-nav__item">
-          <a href="{{ item.url }}" 
-             class="site-nav__link {{ 'active' if page.url === item.url }}"
-             {% if page.url === item.url %}aria-current="page"{% endif %}>
-            {{ item.key }}
-          </a>
-        </li>
-      {%- endfor -%}
-    </ul>
-  </nav>
+  <div class="site-header__controls">
+    <nav class="site-nav" role="navigation" aria-label="main navigation">
+      <ul class="site-nav__list">
+        {%- for item in navItems %}
+          <li class="site-nav__item">
+            <a href="{{ item.url }}" 
+               class="site-nav__link {{ 'active' if page.url === item.url }}"
+               {% if page.url === item.url %}aria-current="page"{% endif %}>
+              {{ item.key }}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+      <span aria-hidden="true">🌙</span>
+      <span data-theme-toggle-label>Dark</span>
+    </button>
+  </div>
 </header>

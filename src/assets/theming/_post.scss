@@ -15,7 +15,7 @@
       line-height: 1.2;
       letter-spacing: -0.02em;
       margin-bottom: 2rem;
-      color: $darkest-shade;
+      color: var(--color-heading);
     }
 
     .post__meta {
@@ -25,7 +25,7 @@
       gap: 1.2rem;
       font-family: $main-font;
       font-size: 1.4rem;
-      color: $muted-text;
+      color: var(--color-text-muted);
       margin-top: 1rem;
 
       .category {
@@ -43,7 +43,7 @@
     font-family: $main-font;
     font-size: 1.9rem;
     line-height: 1.75; // More space between lines for readability
-    color: rgba(0, 0, 0, 0.85);
+    color: var(--color-content);
 
     p {
       margin-bottom: 2.5rem;
@@ -54,7 +54,7 @@
       height: auto;
       display: block;
       border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 20px var(--color-shadow-soft);
     }
 
     &__figure {
@@ -67,7 +67,7 @@
       figcaption {
         margin-top: 1.5rem;
         font-size: 1.4rem;
-        color: $muted-text;
+        color: var(--color-text-muted);
         text-align: center;
         font-style: italic;
         line-height: 1.5;
@@ -86,12 +86,12 @@
     blockquote {
       margin: 4rem 0;
       padding-left: 3rem;
-      border-left: 3px solid $darkest-shade;
+      border-left: 3px solid var(--color-heading);
       font-family: $accent-font;
       font-style: italic;
       font-size: 2.4rem;
       line-height: 1.5;
-      color: $darkest-shade;
+      color: var(--color-heading);
 
       p { margin-bottom: 0; }
     }
@@ -121,7 +121,7 @@
         margin-top: 1.5rem;
         font-size: 1.4rem;
         text-align: center;
-        color: $muted-text;
+        color: var(--color-text-muted);
         font-style: italic;
       }
     }
@@ -129,12 +129,12 @@
     /* Links inside text */
     a {
       text-decoration: underline;
-      text-decoration-color: rgba(0, 0, 0, 0.1);
+      text-decoration-color: var(--color-border-strong);
       text-underline-offset: 4px;
       
       &:hover {
-        text-decoration-color: $darkest-shade;
-        background-color: rgba(0, 0, 0, 0.03);
+        text-decoration-color: var(--color-heading);
+        background-color: var(--color-overlay-hover);
       }
     }
   }
@@ -142,14 +142,14 @@
   &__footer {
     margin-top: 8rem;
     padding-top: 4rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid var(--color-border-soft);
     
     .back-link {
       font-size: 1.4rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: $darkest-shade;
+      color: var(--color-heading);
     }
   }
 }

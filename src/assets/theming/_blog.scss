@@ -17,7 +17,8 @@
 }
 
 .article__item {
-  border: 1px solid rgba(0, 0, 0, 0.1); 
+  border: 1px solid var(--color-border-strong); 
+  background-color: var(--color-surface);
   border-radius: 20px; 
   padding: 3rem;
   display: flex;
@@ -25,9 +26,9 @@
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: $darkest-shade;
+    border-color: var(--color-heading);
     transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px var(--color-shadow-soft);
   }
 
   h2 {
@@ -36,15 +37,15 @@
     margin-bottom: 1.5rem;
     
     a {
-      color: $darkest-shade;
+      color: var(--color-heading);
       text-decoration: none;
-      &:hover { color: $link-clr; }
+      &:hover { color: var(--color-link-hover); }
     }
   }
 
   p {
     font-size: 1.5rem;
-    color: $muted-text;
+    color: var(--color-text-muted);
     line-height: 1.5;
     margin-bottom: 3rem;
     flex-grow: 1; 
@@ -56,14 +57,14 @@
     align-items: flex-start !important;
     gap: 1.2rem;            
     margin-top: auto;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid var(--color-border-soft);
     padding-top: 2rem;
     font-family: $main-font;
     width: 100%;
 
     .article__date {
       font-size: 1.4rem;
-      color: $muted-text;
+      color: var(--color-text-muted);
       font-weight: 500;
       margin: 0 !important;
       padding: 0 !important;
@@ -94,18 +95,18 @@
       align-items: center;
       font-size: 1.2rem;
       font-weight: 600;
-      color: $darkest-shade;
+      color: var(--color-heading);
       text-decoration: none;
       padding: 0.4rem 1.2rem; // The left/right padding is 1.2rem
-      border: 1px solid $border-clr;
+      border: 1px solid var(--color-border);
       border-radius: 6px;
       line-height: 1;
       white-space: nowrap;
       background-color: transparent;
 
       &:hover {
-        background-color: $darkest-shade;
-        color: #fff;
+        background-color: var(--color-accent-strong);
+        color: var(--color-on-accent);
       }
     }
   }
@@ -124,7 +125,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: $muted-text;
+    color: var(--color-text-muted);
     margin-bottom: 1.5rem;
   }
 
@@ -143,21 +144,21 @@
     font-size: 1.3rem;
     font-weight: 600;
     text-transform: lowercase; // Matches your "all" style
-    color: $darkest-shade;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--color-heading);
+    border: 1px solid var(--color-border-strong);
     border-radius: 100px; 
     text-decoration: none;
     transition: all 0.2s ease;
 
     &:hover {
-      border-color: $darkest-shade;
-      background-color: rgba(0, 0, 0, 0.02);
+      border-color: var(--color-heading);
+      background-color: var(--color-overlay-soft);
     }
 
     &.is-active {
-      background-color: $darkest-shade;
-      color: #fff;
-      border-color: $darkest-shade;
+      background-color: var(--color-accent-strong);
+      color: var(--color-on-accent);
+      border-color: var(--color-accent-strong);
     }
   }
 }

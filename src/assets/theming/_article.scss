@@ -5,13 +5,13 @@ article {
     text-decoration: none;
     margin-left: 1rem;
     padding: .4rem 1rem;
-    border: 1px solid $base-clr;
+    border: 1px solid var(--color-text);
     border-radius: 6px;
     line-height: 1;
 
     &:hover {
-      background-color: $base-clr;
-      color: $bg-clr;
+      background-color: var(--color-accent-strong);
+      color: var(--color-on-accent);
       transition: all 400ms ease-in;
     }
   }
