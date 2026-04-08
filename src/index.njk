@@ -17,6 +17,10 @@ eleventyNavigation:
 </section>
 
 <div class="blog-grid-container">
+
+  {# This is the decorative element #}
+  <div class="blog-decoration-motif"></div>
+
   {# We pull your blog posts from the 'blog' collection #}
   {% set articles = collections.blog %}
   {% include "components/articleList.njk" %}

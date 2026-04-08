@@ -307,3 +307,28 @@ a { color: var(--color-link); text-decoration: none; transition: all 0.2s; }
     transform: translateY(0); 
   }
 }
+
+.blog-grid-container {
+  position: relative; // Required to "contain" the absolute-positioned motif
+  margin-top: 4rem;
+}
+
+.blog-decoration-motif {
+  position: absolute;
+  top: -180px;      // Adjust this to move it higher or lower
+  right: 40px;        // Aligns it with the right-hand block
+  width: 350px;    // Size of the geometric pattern
+  height: 320px;
+  background-image: url('/assets/images/geometric-pattern.svg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  opacity: 0.4;    // Makes it subtle and "minimalist"
+  z-index: -1;     // Puts it behind the post cards
+  pointer-events: none; // Ensures you can still click things under it
+
+  // Only show this on desktops where the grid has two columns
+  @media (max-width: 900px) {
+    display: none;
+  }
+}
