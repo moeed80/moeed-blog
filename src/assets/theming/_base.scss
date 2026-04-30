@@ -316,7 +316,7 @@ a { color: var(--color-link); text-decoration: none; transition: all 0.2s; }
 .blog-decoration-motif {
   position: absolute;
   top: -180px;      // Adjust this to move it higher or lower
-  right: 40px;        // Aligns it with the right-hand block
+  right: 28px;        // Aligns it with the right-hand block
   width: 350px;    // Size of the geometric pattern
   height: 320px;
   background-image: url('/assets/images/geometric-pattern.svg');
