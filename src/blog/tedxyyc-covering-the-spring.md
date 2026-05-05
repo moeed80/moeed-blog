@@ -22,4 +22,4 @@ One of the things that seemed to really click with the audience was when I talke
 
 At the end of the day, it's about the people, not the pixels. The most personal part of the talk for me was thinking about the bravery of everyone sending us those clips. Behind every grainy, shaky video we verified was a person risking their life just to say, "I am here, and this is what is happening". Technology and open-source tools are really just the plumbing. The "Spring" wasn't a technological revolution. It was a human one that finally found the tools it needed to be heard.
 
-So, where do we go from here? The "Spring" isn't over just because the cameras have moved on to something else. Syria and Libya are still open stories that are being written as we speak. The way we engage with information has fundamentally changed, and we are all participants now.2
+So, where do we go from here? The "Spring" isn't over just because the cameras have moved on to something else. Syria and Libya are still open stories that are being written as we speak. The way we engage with information has fundamentally changed, and we are all participants now.
