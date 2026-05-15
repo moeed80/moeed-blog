@@ -1,19 +1,26 @@
-{% set socialImage = [metadata.url, metadata.image] | join %}
-{% set title = "Eleventy Not So Minimal Blog Starter" %}
-  
-<meta name="description" content="{{ metadata.description }}">
+{% set pageTitle = title or metadata.title %}
+{% set pageDescription = description or excerpt or metadata.description %}
+{% set canonicalUrl = page.url | url | absoluteUrl(metadata.url) %}
+{% set socialImage = (image or metadata.image) | url | absoluteUrl(metadata.url) %}
+{% set ogType = "article" if layout == "article" else "website" %}
+{% set feedUrl = metadata.feedUrl | url | absoluteUrl(metadata.url) %}
+
+<link rel="canonical" href="{{ canonicalUrl }}">
+<link rel="alternate" type="application/atom+xml" title="{{ metadata.title }}" href="{{ feedUrl }}">
+
+<meta name="description" content="{{ pageDescription }}">
 <meta name="author" content="{{ metadata.author.name }}">
 <meta name="generator" content="{{ eleventy.generator }}">
 
-<meta property="og:title" content="{{ title }}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="">
-<meta property="og:description" content="{{ metadata.description }}">
-<meta property="og:image" content="{{ socialImage  }}">
+<meta property="og:title" content="{{ pageTitle }}">
+<meta property="og:type" content="{{ ogType }}">
+<meta property="og:url" content="{{ canonicalUrl }}">
+<meta property="og:description" content="{{ pageDescription }}">
+<meta property="og:image" content="{{ socialImage }}">
+<meta property="og:site_name" content="{{ metadata.title }}">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@twitterhandle">
-<meta name="twitter:title" content="{{ title }}">
-<meta name="twitter:description" content="{{ metadata.description }}">
-<meta name="twitter:image" content="socialImage">
-
+<meta name="twitter:site" content="{{ metadata.twitter }}">
+<meta name="twitter:title" content="{{ pageTitle }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<meta name="twitter:image" content="{{ socialImage }}">

@@ -5,13 +5,14 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>{{ metadata.title }}</title>
-    <subtitle>{{ metadata.summary }}</subtitle>
-    <link href="{{ metadata.feedUrl }}" rel="self"/>
+    <subtitle>{{ metadata.description }}</subtitle>
+    <link href="{{ metadata.feedUrl | url | absoluteUrl(metadata.url) }}" rel="self"/>
     <link href="{{ metadata.url }}"/>
     <updated>{{ collections.blog | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
     <id>{{ metadata.url }}</id>
     <author>
-        <name>Claudia R</name>
+        <name>{{ metadata.author.name }}</name>
+        <email>{{ metadata.author.email }}</email>
     </author>
 
     {%- for article in collections.blog -%}
