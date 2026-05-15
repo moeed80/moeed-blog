@@ -11,7 +11,7 @@ The Gaza War of early 2009, known as Operation Cast Lead, was a watershed moment
 
 
 
-In January 2009, we officially launched the Al Jazeera Creative Commons Repository ([http://cc.aljazeera.com](http://cc.aljazeera.com)), the first of its kind for a major news organization. We built the platform on Drupal and used blip.tv to host the videos, allowing users to download and repurpose high-quality broadcast footage under a 3.0 attribution license. The goal was simple: to democratize access to the news and ensure that the human stories we captured could be shared and verified by anyone, anywhere.3
+In January 2009, we officially launched the Al Jazeera Creative Commons Repository ([http://cc.aljazeera.com](http://cc.aljazeera.com)), the first of its kind for a major news organization. We built the platform on Drupal and used blip.tv to host the videos, allowing users to download and repurpose high-quality broadcast footage under a 3.0 attribution license. The goal was simple: to democratize access to the news and ensure that the human stories we captured could be shared and verified by anyone, anywhere.4
 
 
 
