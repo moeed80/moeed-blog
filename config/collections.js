@@ -1,9 +1,17 @@
 import slugify from 'slugify'
 
+function postTimestamp(item) {
+  const d = item.date
+  return d instanceof Date && !Number.isNaN(d.getTime()) ? d.getTime() : 0
+}
+
+function sortPostsByDateDesc(posts) {
+  return [...posts].sort((a, b) => postTimestamp(b) - postTimestamp(a))
+}
+
 /* Creating a collection containing all blogposts by filtering based on folder and filetype */
 const getAllPosts = (collectionApi) => {
-  return collectionApi.getFilteredByGlob('./src/blog/*.md')
-  .reverse()
+  return sortPostsByDateDesc(collectionApi.getFilteredByGlob('./src/blog/*.md'))
 }
 
 // Helper function to handle both single strings and arrays of categories
@@ -56,6 +64,10 @@ const getCategorisedPosts = (collectionApi) => {
       }
     })
   })
+
+  for (const slug of Object.keys(categorisedPosts)) {
+    categorisedPosts[slug].sort((a, b) => postTimestamp(b) - postTimestamp(a))
+  }
 
   return categorisedPosts
 }
