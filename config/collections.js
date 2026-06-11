@@ -72,10 +72,16 @@ const getCategorisedPosts = (collectionApi) => {
   return categorisedPosts
 }
 
+/* Creating a collection containing all projects by filtering based on folder and filetype */
+const getProject = (collectionApi) => {
+  return sortPostsByDateDesc(collectionApi.getFilteredByGlob('./src/project/*.md'))
+}
+
 export {
   getAllPosts,
   getCategoryList,
-  getCategorisedPosts
+  getCategorisedPosts,
+  getProject
 }
 
 

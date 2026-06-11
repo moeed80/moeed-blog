@@ -4,16 +4,48 @@
   <span class="blog-filter__label">Filter posts by category:</span>
   
   <ul class="blog-filter__list">
-    {# "All" Link #}
-    <li class="blog-filter__item">
-      <a class="blog-filter__link {{ ' is-active' if page.url == '/blog/' }}" 
-         href="/blog/"
-         {{ 'aria-current="page"' if page.url == "/blog/" }}>
-         all
-      </a>
-    </li>
+    {# "Home" Link #}
+<li class="blog-filter__item">
+  <a class="blog-filter__link {{ ' is-active' if page.url == '/' }}" 
+     href="/"
+     {{ 'aria-current="page"' if page.url == "/" }}>
+     Home
+  </a>
+</li>
+{# "Blog" Link #}
+<li class="blog-filter__item">
+  <a class="blog-filter__link {{ ' is-active' if page.url == '/blog/' }}" 
+     href="/blog/"
+     {{ 'aria-current="page"' if page.url == "/blog/" }}>
+     Blog
+  </a>
+</li>
+{# "Projects" Link #}
+<li class="blog-filter__item">
+  <a class="blog-filter__link {{ ' is-active' if page.url == '/project/' }}" 
+     href="/project/"
+     {{ 'aria-current="page"' if page.url == "/project/" }}>
+     Projects
+  </a>
+</li>
+{# "About" Link #}
+<li class="blog-filter__item">
+  <a class="blog-filter__link {{ ' is-active' if page.url == '/about/' }}" 
+     href="/about/"
+     {{ 'aria-current="page"' if page.url == "/about/" }}>
+     About
+  </a>
+</li>
+{# "Contact" Link #}
+<li class="blog-filter__item">
+  <a class="blog-filter__link {{ ' is-active' if page.url == '/contact/' }}" 
+     href="/contact/"
+     {{ 'aria-current="page"' if page.url == "/contact/" }}>
+     Contact
+  </a>
+</li>
 
-    {# Individual Categories #}
+{# Individual Categories #}
     {%- for category in categories %}
       {% set catUrl = ["/blog/", category.key, "/" ] | join %}
       <li class="blog-filter__item">

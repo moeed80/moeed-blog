@@ -8,6 +8,7 @@ import {
   getAllPosts,
   getCategoryList,
   getCategorisedPosts,
+  getProject
 } from "./config/collections.js"
 
 import { readableDate } from "./config/filters.js"
@@ -62,6 +63,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addCollection("blog", getAllPosts)
   eleventyConfig.addCollection("categoryList", getCategoryList)
   eleventyConfig.addCollection("categorisedPosts", getCategorisedPosts)
+  eleventyConfig.addCollection("project", getProject)
 
   /*=================*/
   /* Filters     */

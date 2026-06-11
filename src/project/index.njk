@@ -1,0 +1,31 @@
+---
+layout: page
+title: "Mildly Useful Artifacts"
+eleventyNavigation:
+    key: project
+    order: 3
+pagination:
+  # Order matches collections.project: newest first by date (config/collections.js).
+  data: collections.project
+  size: 10
+  alias: projects
+---
+
+<h1>{{ title }}</h1>
+<p>My day job is largely conversational, usually involving spreadsheets, strategy, and nodding at slide deck presentations. Perhaps that’s why I thought it would be a grand idea to spend a weekend here and there running the open-source model (qwen3-coder30b) on my Mac to write Swift code.</p>
+<p>It turns out that building software using Visual Studio Code with the Cline extension takes an alarming amount of time, mostly due to the hours spent debugging code that looked utterly flawless but did absolutely nothing. Nevertheless, I persisted out of pure spite. The resulting applications are entirely local, unpretentious utilities that currently serving well a target audience of exactly one user (me). They won’t change your life, but they might lead you to utilize less than your usual quota of curses.</p>
+<p>For me, paying $20 for a tool, I would only use once during a tense legal session to merge PDFs clearly is insanity. Same goes for when you run in to a scenario when you need to export your text SMS history for some odd reason in a rush. If you are in that scenario, then enjoy! If the tools promises much and delivers nada, well then you get what you pay for.</p>
+
+{% if projects.length > 0 %}
+  <div class="blog-grid-container">
+    {%- for project in projects %}
+      <article class="project-card">
+        <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
+        <p class="project-date">{{ project.data.date | readableDate }}</p>
+        <p class="project-excerpt">{{ project.data.excerpt }}</p>
+      </article>
+    {%- endfor %}
+  </div>
+{% else %}
+  <p>No projects yet.</p>
+{% endif %}
