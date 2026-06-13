@@ -2,6 +2,7 @@
 layout: article
 title: Micro-reporting on Twitter during Operation Cast Lead
 date: 2009-02-15
+image: "/assets/images/2009-02-15 ushahidi-map-war-on-gaza.jpg"
 excerpt: "During Israel’s Operation Cast Lead in Gaza in December 2008 to January of 2009, we realized that the traditional broadcast cycle was too slow for the speed of the conflict and as a result started 'Micro Reporting.'"
 category: 
  - Palestine
