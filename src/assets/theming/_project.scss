@@ -59,4 +59,11 @@
     margin-bottom: 3rem;
     flex-grow: 1; 
   }
+
+  .project-card__image img {
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: block;
+  }
 }

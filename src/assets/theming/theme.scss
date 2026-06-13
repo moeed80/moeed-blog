@@ -8,3 +8,25 @@
 @import "./contact";
 @import "./about";
 @import "./project";
+
+/* Theme for code blocks */
+.code {
+  background-color: var(--code-bg, #f7f7f9);
+  border-radius: 4px;
+  padding: 0.8em 1.2em;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--color-text) !important;
+  font-size: 0.72em;
+  display: inline-block;
+}
+
+/* Ensure code blocks work in post content */
+.post__content .code {
+  background-color: var(--code-bg, #f7f7f9);
+  border-radius: 4px;
+  padding: 0.8em 1.2em;
+  font-family: 'Courier New', Courier, monospace;
+  color: var(--color-text) !important;
+  font-size: 0.72em;
+  display: inline-block;
+}

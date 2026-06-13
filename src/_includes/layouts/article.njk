@@ -26,6 +26,10 @@ layout: page
   </div>
 
   <footer class="post__footer">
-    <a href="/blog" class="back-link">← Back to Blog</a>
+    {% if collections.project %}
+      <a href="/project" class="back-link">← Back to Projects</a>
+    {% else %}
+      <a href="/blog" class="back-link">← Back to Blog</a>
+    {% endif %}
   </footer>
 </article>

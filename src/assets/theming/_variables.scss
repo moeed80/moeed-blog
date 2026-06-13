@@ -15,6 +15,21 @@ $darkest-shade: #1A1A1A;  /* Soft Charcoal for main text */
 $muted-text:  #555555;    /* Grey for excerpts/dates */
 $border-clr:  #D9D7CB;    /* Subtle line color */
 
+/* Code Block Backgrounds - Theme-aware */
+:root {
+  --code-bg: #f7f7f9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --code-bg: #2a2a2a;
+  }
+}
+
+html[data-theme='dark'] {
+  --code-bg: #2a2a2a;
+}
+
 /* Variable Mapping */
 /* This ensures your existing styles update automatically */
 $base-clr:     $darkest-shade;

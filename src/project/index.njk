@@ -13,9 +13,15 @@ pagination:
 ---
 
 <h1>{{ title }}</h1>
-<p>My day job is largely conversational, usually involving spreadsheets, strategy, and nodding at slide deck presentations while watching a lot of heavy news videos online. Perhaps that’s why I thought it would be a grand idea to spend my spare time running the <a href="https://ollama.com/library/qwen3-coder:30b">Chinese open-source LLM (qwen3-coder-30b)</a> on my Mac to debug AI generated code.</p>
-<p>It turns out that building software using Visual Studio Code with the <a href="https://cline.bot">Cline autonomous coding agent</a> takes an alarming amount of time, mostly due to the hours spent debugging code that looked utterly flawless but did absolutely nothing. Nevertheless, I persisted out of pure spite. The resulting applications are entirely local, unpretentious utilities that currently serving well a target audience of exactly one user (me). They won’t change your life, but they might lead you to utilize less than your usual quota of curses.</p>
-<p>For me, paying $20 for a tool, I would only use once during a tense legal session to merge PDFs clearly is insanity. Same goes for when you run in to a scenario when you need to export your text SMS history for some odd reason in a rush. If you are in that scenario, then enjoy! If the tools promises much and delivers nada, well then you get what you pay for.</p>
+<p>My day job is largely conversational, usually involving spreadsheets, strategy, and nodding at slide deck presentations while watching a lot of heavy news videos online. Perhaps that's why I thought it would be a grand idea to spend my spare time running a Chinese open-source LLM on my Mac and debug AI generated code.</p>
+<p class="code">My dev stack:<br />
+    - VS Code<br />
+    - Cline extension for autonomous coding agent<br />
+    - Ollama for on device <a href="https://ollama.com/library/qwen2.5-coder:32b">qwen2.5-coder-32b</a> (architecting and planning)<br />
+    - and <a href="https://ollama.com/library/qwen3-coder:30b">qwen3-coder-30b</a> (coding and execution)
+</p>
+<p>It turns out that building software using AI takes an alarming amount of time, mostly due to the hours spent debugging code that looked utterly flawless but did absolutely nothing. Nevertheless, I've persisted. The resulting applications are entirely local, unpretentious utilities that are currently serving well a target audience of exactly one user (me). They won't change your life, but they might lead you to utilize less than your usual quota of curses.</p>
+<p>For me, paying $20 for a tool, I would only use once during a tense legal session to merge PDFs clearly is insanity. Same goes for when you run in to a scenario when you need to export your text SMS history for some odd reason in a rush. If you are in that scenario, then enjoy! If the tools promises much and delivers less than that, well then you get what you pay for.</p>
 
 {% if projects.length > 0 %}
   <div class="project-grid-container">
@@ -24,9 +30,16 @@ pagination:
         <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
         <p class="project-date">{{ project.data.date | readableDate }}</p>
         <p class="project-excerpt">{{ project.data.excerpt }}</p>
+        {# Show project image if available #}
+        {%- if project.data.image %}
+          <div class="project-card__image">
+            <img src="{{ project.data.image }}" alt="{{ project.data.title }} image" style="max-width: 100%; height: auto; margin-top: 10px;" />
+          </div>
+        {%- endif %}
       </article>
     {%- endfor %}
   </div>
 {% else %}
   <p>No projects yet.</p>
 {% endif %}
+
