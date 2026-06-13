@@ -17,7 +17,7 @@ Many users wonder how to export iPhone text messages when facing these situation
 ### A Local, Secure iMazing Alternative for Mac
 
 <figure class="post__figure">
-  <img src="/assets/images/projects/blue-bubble-vault-1024.jpg" alt="Blue Bubble Vault MacOS app" />
+  <img src="/assets/images/projects/blue-bubble-vault-1024.jpg" alt="Blue Bubble Vault MacOS app" style="max-width: 400px; display: block; margin: 0 auto;" />
   <figcaption>Blue Bubble Vault, MacOS App Logo.</figcaption>
 </figure>
 
