@@ -4,6 +4,7 @@ title: "Mangla & Co LLC"
 date: 2025-12-20
 excerpt: "The company under which the software distributed on this site is produced by."
 image: "/assets/images/projects/mangla-1024.jpg"
+sticky: true
 tags:
   - projects
 ---

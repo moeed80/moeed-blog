@@ -43,6 +43,20 @@
     }
   }
 
+  .article__image {
+    margin-bottom: 1.5rem;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid var(--color-border-soft);
+    }
+  }
+
   p {
     font-size: 1.5rem;
     color: var(--color-text-muted);

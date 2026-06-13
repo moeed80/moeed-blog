@@ -21,7 +21,7 @@ eleventyNavigation:
   {# This is the decorative element #}
   <div class="blog-decoration-motif"></div>
 
-  {# Blog collection: newest first by post date (config/collections.js). #}
-  {% set articles = collections.blog %}
+  {# Combined feed collection: newest first by post date (config/collections.js). #}
+  {% set articles = collections.combinedFeed %}
   {% include "components/articleList.njk" %}
 </div>

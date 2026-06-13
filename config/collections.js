@@ -77,11 +77,28 @@ const getProject = (collectionApi) => {
   return sortPostsByDateDesc(collectionApi.getFilteredByGlob('./src/project/*.md'))
 }
 
+/* Creating a combined feed of blog posts and project posts, sorted by date descending, with sticky posts at the top */
+const getCombinedFeed = (collectionApi) => {
+  const blogs = collectionApi.getFilteredByGlob('./src/blog/*.md')
+  const projects = collectionApi.getFilteredByGlob('./src/project/*.md')
+  const combined = [...blogs, ...projects]
+  
+  // Sort by date descending
+  const sorted = sortPostsByDateDesc(combined)
+  
+  // Separate sticky and non-sticky posts to guarantee order
+  const stickyPosts = sorted.filter(item => item.data.sticky === true)
+  const regularPosts = sorted.filter(item => item.data.sticky !== true)
+  
+  return [...stickyPosts, ...regularPosts]
+}
+
 export {
   getAllPosts,
   getCategoryList,
   getCategorisedPosts,
-  getProject
+  getProject,
+  getCombinedFeed
 }
 
 
