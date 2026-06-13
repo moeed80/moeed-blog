@@ -261,19 +261,22 @@ a { color: var(--color-link); text-decoration: none; transition: all 0.2s; }
   
   &__inner { 
     display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 1rem;
   }
   
   .site-footer__info {
     font-size: 1.4rem;
     color: var(--color-text-muted);
+    margin: 0;
   }
 
   .icon { 
     width: 1.8rem; 
     height: 1.8rem; 
     fill: currentColor; 
+    vertical-align: middle;
   }
   
   .site-footer__social {
