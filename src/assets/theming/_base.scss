@@ -275,6 +275,19 @@ a { color: var(--color-link); text-decoration: none; transition: all 0.2s; }
     height: 1.8rem; 
     fill: currentColor; 
   }
+  
+  .site-footer__social {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .site-footer__social-text {
+    margin: 0;
+    line-height: 1.8rem;
+    vertical-align: middle;
+    font-size: 1.4rem;
+  }
 }
 
 /* ==========================================================================

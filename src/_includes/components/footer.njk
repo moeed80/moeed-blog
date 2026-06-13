@@ -1,15 +1,19 @@
 <footer class="site-footer" role="contentinfo">
   <div class="site-footer__inner">
-    <p class="site-footer__info">
-      &copy; {{ "" | year }} Moeed Ahmad. Built with <a href="https://www.11ty.dev/" target="_blank">Eleventy</a>.
-    </p>
-
     <div class="site-footer__social">
-      <span>Follow me on</span>
+      <span class="site-footer__social-text">Follow me on</span>
       <a class="social-media__link" href="https://x.com/moeed" target="_blank">
         {% icon "custom:twitter", class="icon" %}
         
       </a>
+      <a class="social-media__link" href="https://www.linkedin.com/in/moeed/" target="_blank">
+        {% icon "custom:linkedin", class="icon" %}
+        
+      </a>
     </div>
+    
+    <p class="site-footer__info">
+      &copy; {{ "" | year }} Mangla & CO LLC. Built with <a href="https://www.11ty.dev/" target="_blank">Eleventy</a>.
+    </p>
   </div>
 </footer>
