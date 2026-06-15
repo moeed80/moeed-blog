@@ -1,3 +1,6 @@
 node_modules/
 _site/
 .cache/
+.firebase/
+.DS_Store
+**/.DS_Store
