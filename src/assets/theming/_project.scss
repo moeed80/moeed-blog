@@ -60,10 +60,16 @@
     flex-grow: 1; 
   }
 
-  .project-card__image img {
-    border-radius: 12px;
-    overflow: hidden;
-    margin: 0 auto;
-    display: block;
+  .project-card__image {
+    a,
+    img {
+      display: block;
+    }
+
+    img {
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 0 auto;
+    }
   }
 }

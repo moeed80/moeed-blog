@@ -7,7 +7,9 @@
       {# Show image if available #}
       {%- if article.data.image %}
       <div class="article__image">
-        <img src="{{ article.data.image | url }}" alt="{{ article.data.title }} image" />
+        <a href="{{ article.url | url }}" aria-label="Read {{ article.data.title }}">
+          <img src="{{ article.data.image | url }}" alt="{{ article.data.title }} image" />
+        </a>
       </div>
       {%- endif %}
       

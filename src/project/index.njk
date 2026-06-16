@@ -33,7 +33,9 @@ pagination:
         {# Show project image if available #}
         {%- if project.data.image %}
           <div class="project-card__image">
-            <img src="{{ project.data.image }}" alt="{{ project.data.title }} image" style="max-width: 100%; height: auto; margin-top: 10px;" />
+            <a href="{{ project.url | url }}" aria-label="View {{ project.data.title }}">
+              <img src="{{ project.data.image | url }}" alt="{{ project.data.title }} image" style="max-width: 100%; height: auto; margin-top: 10px;" />
+            </a>
           </div>
         {%- endif %}
       </article>
@@ -42,4 +44,3 @@ pagination:
 {% else %}
   <p>No projects yet.</p>
 {% endif %}
-

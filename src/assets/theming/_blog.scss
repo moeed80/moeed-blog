@@ -46,6 +46,10 @@
   .article__image {
     margin-bottom: 1.5rem;
 
+    a {
+      display: block;
+    }
+
     img {
       display: block;
       width: 100%;
