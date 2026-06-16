@@ -60,6 +60,7 @@ Overall, it is a straightforward, highly efficient way to organize your local fi
 <br>
 <strong>Caveats & Fine Print</strong><br>
 - License: Distributed entirely under the permissive MIT License. You are free to inspect, tweak, or break the code as you see fit.<br>
-- Disclaimer: This software is provided "as is", without warranty of any kind. It handles your document compiling completely locally, so your privacy remains entirely in your own hands.<br>
-- Bugs & Grievances: If the application decides to misbehave or throws an unexpected error, please kindly submit a bug report via the <a href="/contact/">Contact Form</a>.
+- Privacy: This software is published by <a href="/project/mangla/">Mangla & Co LLC</a> and follows the shared <a href="/privacy/">privacy policy</a>. It handles your document compiling completely locally, so your privacy remains entirely in your own hands.<br>
+- Disclaimer: This software is provided "as is", without warranty of any kind.<br>
+- Bugs & Grievances: If the application decides to misbehave or throws an unexpected error, please kindly submit a bug report via the <a href="/contact/">Contact Form</a> or email <a href="mailto:developer@moeed.com">developer@moeed.com</a>.
 </p>
