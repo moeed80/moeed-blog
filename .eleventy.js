@@ -50,6 +50,7 @@ export default function (eleventyConfig) {
   /*===================================================*/
   // This line ensures your CSS, Icons, and Images all get copied correctly
   eleventyConfig.addPassthroughCopy("./src/assets")
+  eleventyConfig.addPassthroughCopy("./src/favicon.ico")
   eleventyConfig.addPassthroughCopy("./src/images")
 
   /*=================*/
