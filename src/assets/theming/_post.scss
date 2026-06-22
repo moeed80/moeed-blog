@@ -49,6 +49,78 @@
       margin-bottom: 2.5rem;
     }
 
+    .post__download {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.2rem 1.6rem;
+      margin: 0 0 3.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--color-border-soft);
+    }
+
+    .post__download-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      max-width: 100%;
+      min-height: 4.4rem;
+      padding: 1rem 1.6rem;
+      border: 1px solid var(--color-accent-strong);
+      border-radius: 6px;
+      background-color: var(--color-accent-strong);
+      color: var(--color-on-accent);
+      font-size: 1.4rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      box-shadow: 0 4px 16px var(--color-shadow-soft);
+
+      &:hover {
+        background-color: var(--color-link);
+        border-color: var(--color-link);
+        color: var(--color-on-accent);
+        text-decoration: none;
+        transform: translateY(-1px);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--color-link);
+        outline-offset: 3px;
+      }
+    }
+
+    .post__download-button--compact {
+      min-height: 3.6rem;
+      margin-left: 0.4rem;
+      padding: 0.7rem 1.1rem;
+      font-size: 1.2rem;
+      letter-spacing: 0.04em;
+      vertical-align: middle;
+      box-shadow: none;
+    }
+
+    .post__download-icon {
+      width: 1.8rem;
+      height: 1.8rem;
+      flex: 0 0 auto;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .post__download-note {
+      margin: 0;
+      color: var(--color-text-muted);
+      font-size: 1.4rem;
+      line-height: 1.5;
+    }
+
     img {
       max-width: 100%;
       height: auto;
