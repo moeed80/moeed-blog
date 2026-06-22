@@ -8,6 +8,16 @@ tags:
   - projects
 ---
 
+<div class="post__download">
+  <a class="post__download-button" href="https://github.com/moeed80/Blue-Bubble-Vault/releases/download/v1.0.0/Blue.Bubble.Vault.1.0.dmg">
+    <svg class="post__download-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+      <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />
+    </svg>
+    <span>Download Blue Bubble Vault (.dmg)</span>
+  </a>
+  <p class="post__download-note">Free macOS app for Ventura or later. No account, no upload.</p>
+</div>
+
 If you have ever needed to make sense of a long Messages thread, you know that Apple's native tools are not exactly built for calm review. Finding the right stretch of conversation, narrowing it to a date range, and turning it into a clean offline record can become its own little administrative weather system.
 
 Blue Bubble Vault is a local-first native macOS app for reviewing, filtering, and exporting Apple Messages / iMessage / SMS / RCS conversations. It is designed for privacy-conscious personal archiving, legal review preparation, and offline recordkeeping without requiring an app account, cloud upload, or app telemetry.
@@ -23,14 +33,14 @@ The app is built around a simple idea: your private messages should stay on your
 
 ### Current Features
 
-The current v1 release-prep build includes:
+The current v1 release includes:
 
 * **Native macOS workflow:** A SwiftUI app for selecting a message source, browsing threads, previewing messages, applying filters, and exporting.
 * **Local-first processing:** Message discovery, preview, filtering, and export generation happen on the user's Mac.
 * **No app account or app cloud processing:** Blue Bubble Vault does not require an app login and does not upload message contents to Mangla & Co LLC.
 * **No app analytics or telemetry:** The app is not designed to collect usage history.
 * **Simulated demo mode:** Synthetic sample data can be used without Full Disk Access, Contacts permission, or private local Messages data.
-* **Local source discovery:** The app can discover expected local Messages database locations, iPhone backup database locations, and the simulated demo source. Live database and backup behavior still need broader real-world validation before the release is treated as fully hardened.
+* **Local source discovery:** The app can discover expected local Messages database locations, iPhone backup database locations, and the simulated demo source. Live database and backup behavior still need broader real-world validation as the app is hardened across more real-world systems.
 * **Thread preview and search:** Select a thread, preview matching messages, and search the thread list.
 * **Date and keyword filters:** Narrow an export by date range, keyword, or both.
 * **Optional Contacts lookup:** Contacts access is optional and used locally to resolve display names.
@@ -77,7 +87,7 @@ Demo mode uses synthetic data and does not require private permissions. Full Dis
 <br>
 <strong>Artifact Assets</strong><br>
 - Source Code: <a href="https://github.com/moeed80/Blue-Bubble-Vault">https://github.com/moeed80/Blue-Bubble-Vault</a><br>
-- Direct Application Download: Coming soon. No release asset is linked yet.<br>
+- Direct Application Download: <br><a class="post__download-button post__download-button--compact" href="https://github.com/moeed80/Blue-Bubble-Vault/releases/download/v1.0.0/Blue.Bubble.Vault.1.0.dmg"><svg class="post__download-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" /></svg><span>Download Blue Bubble Vault (.dmg)</span></a><br>
 <br>
 <strong>Caveats & Fine Print</strong><br>
 - License: Distributed entirely under the permissive MIT License. You are free to inspect, tweak, or break the code as you see fit.<br>
