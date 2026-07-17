@@ -11,7 +11,15 @@ tags:
 
 I have always loved the Pebble because it understands what I want from a watch.
 
-[Install Squintless on the Rebble Store](https://apps.rebble.io/en_US/application/6a5a328955030a00092d829f).
+<div class="post__download">
+  <a class="post__download-button" href="https://apps.rebble.io/en_US/application/6a5a328955030a00092d829f">
+    <svg class="post__download-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+      <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />
+    </svg>
+    <span>Install Squintless on the Rebble Store</span>
+  </a>
+  <p class="post__download-note">Free Pebble Time 2 watch face for Rebble users.</p>
+</div>
 
 ![Squintless Watch Face Banner](/assets/images/projects/squintless-square-banner.png)
 
