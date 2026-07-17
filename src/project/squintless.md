@@ -3,7 +3,7 @@ layout: article
 title: "Squintless: A Pebble Watch Face for Eyes Over 40"
 date: 2026-07-17
 excerpt: "An accessibility-first Pebble Time 2 watch face that makes the time large, clear and readable without unnecessary clutter."
-image: "/assets/images/projects/squintless-1600x900.png"
+image: "/assets/images/projects/squintless-banner-720x320.png"
 permalink: "/projects/squintless/index.html"
 tags:
   - projects
