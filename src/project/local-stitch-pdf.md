@@ -1,42 +1,36 @@
 ---
 layout: article
 title: "Local Stitch: Private PDF Stitching and File Size Reduction for Mac"
-date: 2024-05-15
+date: 2026-05-15
 excerpt: "A free, local-first macOS app that combines PDFs, reduces PDF file size, and prepares source-aware documents for private review, archiving, sharing, and AI-assisted analysis."
 image: "/assets/images/projects/local-stitch-1024.jpg"
 tags:
   - projects
 ---
 
-<div class="post__download">
-  <a class="post__download-button" href="https://github.com/moeed80/Local-Stitch/releases/download/v1.0.0/Local-Stitch-1.0.dmg">
-    <svg class="post__download-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
-      <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" />
-    </svg>
-    <span>Download Local Stitch (.dmg)</span>
-  </a>
-  <p class="post__download-note">Free macOS app for Sonoma or later. No account, no upload.</p>
-</div>
+[Download Local Stitch (.dmg)](https://github.com/moeed80/Local-Stitch/releases/download/v1.0.0/Local-Stitch-1.0.dmg)
+
+Free macOS app for Sonoma or later. No account, no upload.
 
 If you have ever had the misfortune of prepping a large pile of documents for an AI tool, personal records review, business audit, or legal-adjacent mess, you know that digital organization is a quick route to frustration. Bank statements, receipts, forms, records, invoices, and exported documents all arrive as separate PDFs, each with its own little island of context.
 
 Sometimes the problem is that there are too many PDFs. Sometimes the problem is that one PDF is too big to upload, email, or submit anywhere without pleading with it first. And sometimes, because computers enjoy comedy, it is both.
 
 When you use standard PDF tools, context usually vanishes:
-* Original filenames disappear.
-* Source boundaries blur.
-* Page ranges get harder to explain.
-* The final file may still be too large to use where you actually need it.
-* AI tools have less structure to work with.
+
+- Original filenames disappear.
+- Source boundaries blur.
+- Page ranges get harder to explain.
+- The final file may still be too large to use where you actually need it.
+- AI tools have less structure to work with.
 
 Turning to sketchy, web-based PDF tools in these situations is its own headache. Your options are usually limited to uploading sensitive financial, personal, or work documents to an external cloud service, or wrestling with heavy software that somehow makes "put these PDFs together and make the file smaller" feel like a lifestyle choice.
 
 ### Privacy-First PDF Stitching and File Size Reduction
 
-<figure class="post__figure">
-  <img src="/assets/images/projects/local-stitch-1024.jpg" alt="Local Stitch MacOS App" style="max-width: 400px; display: block; margin: 0 auto;" />
-  <figcaption>Local Stitch MacOS App Logo.</figcaption>
-</figure>
+![Local Stitch MacOS App](/assets/images/projects/local-stitch-1024.jpg)
+
+Local Stitch MacOS App Logo.
 
 **Local Stitch** is a free, local-first macOS utility designed to combine up to 100 user-selected PDFs into one organized document, reduce the file size of a single PDF, or merge multiple PDFs and then reduce the final output size. All of this happens on your Mac.
 
@@ -65,39 +59,39 @@ Merge and compression actions stay disabled until protected PDFs have been unloc
 Local Stitch's useful trick is its optional source summary pages. When enabled, the app adds a compilation overview page at the beginning of the merged PDF, plus one source summary page before each selected PDF.
 
 Those pages help humans, LLMs, and RAG (Retrieval-Augmented Generation) systems understand where each section of the merged document came from by preserving:
-* **Original filenames**
-* **Source order and output page ranges**
-* **PDF metadata and detected structure**
-* **SHA-256 fingerprints** of the original selected files
+
+- **Original filenames**
+- **Source order and output page ranges**
+- **PDF metadata and detected structure**
+- **SHA-256 fingerprints** of the original selected files
 
 ### Performance and Safeguards
 
 The backend of Local Stitch is built to keep the workflow calm even when the folder is not. It inspects files before adding them, enforces a 100-PDF limit, measures file sizes, estimates page counts, and performs merge and file-size reduction work away from the main interface so the app can show progress instead of freezing.
 
-* **Local Processing:** File inspection, password unlocking, hashing, summary-page creation, merging, and file size reduction all happen on your Mac.
-* **Source-Aware Output:** Optional summary pages preserve provenance, page ranges, metadata, and fingerprints inside the merged PDF.
-* **Measured Size Reduction:** The app measures real local output rather than guessing a fake percentage.
-* **Native Mac Workflow:** Uses standard drag and drop, native open/save panels, progress feedback, and a "Show in Finder" button when the task is done.
+- **Local Processing:** File inspection, password unlocking, hashing, summary-page creation, merging, and file size reduction all happen on your Mac.
+- **Source-Aware Output:** Optional summary pages preserve provenance, page ranges, metadata, and fingerprints inside the merged PDF.
+- **Measured Size Reduction:** The app measures real local output rather than guessing a fake percentage.
+- **Native Mac Workflow:** Uses standard drag and drop, native open/save panels, progress feedback, and a "Show in Finder" button when the task is done.
 
 Overall, it is a straightforward way to turn scattered or oversized PDFs into cleaner, more usable local documents for review, archiving, sharing, or AI-assisted analysis.
 
-<p class='code'>
-<strong>Technical Details & Requirements</strong><br>
-- Target Operating System: macOS 14.0 (Sonoma) or later.<br>
-- Architecture: Universal Mac app for Apple Silicon and Intel Macs.<br>
-- System Constraints & Limit: Supports up to 100 PDF files in a single task.<br>
-- Compression Options: Balanced and Smallest PDF. Local Stitch uses PDFKit-based file size reduction and measures real temporary output before saving.<br>
-- Under the Hood: Built as a native SwiftUI macOS app using PDFKit for PDF parsing, unlocking, merging, writing, and file size reduction; CryptoKit for SHA-256 hashing; and AppKit panels for native file selection and save workflows.<br>
-- Privacy Model: Uses only files selected by the user. The app performs PDF inspection, password handling, hashing, source summary generation, merging, and file size reduction locally, then writes output PDFs only to the destination the user chooses.<br>
-<br>
-<strong>Artifact Assets</strong><br>
-- Source Code: <a href="https://github.com/moeed80/Local-Stitch">https://github.com/moeed80/Local-Stitch</a><br>
-- Direct Application Download: <br><a class="post__download-button post__download-button--compact" href="https://github.com/moeed80/Local-Stitch/releases/download/v1.0.0/Local-Stitch-1.0.dmg"><svg class="post__download-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14" /></svg><span>Download Local Stitch (.dmg)</span></a><br>
-<br>
-<strong>Caveats & Fine Print</strong><br>
-- License: Distributed entirely under the permissive MIT License. You are free to inspect, tweak, or break the code as you see fit.<br>
-- Privacy: This software is published by <a href="/project/mangla/">Mangla & Co LLC</a> and follows the shared <a href="/privacy/">privacy policy</a>. It handles document processing locally, does not collect analytics, and does not upload your PDFs.<br>
-- Compression Note: File size reduction works best on PDFs with reducible image content. Already optimized, mostly text, or vector-heavy PDFs may not shrink much.<br>
-- Disclaimer: This software is provided "as is", without warranty of any kind.<br>
-- Bugs & Grievances: If the application decides to misbehave or throws an unexpected error, please kindly submit a bug report via the <a href="/contact/">Contact Form</a> or email <a href="mailto:developer@moeed.com">developer@moeed.com</a>. Please do not send passwords, private keys, financial records, legal records, or other sensitive files unless they are necessary for support and you are comfortable sharing them.
-</p>
+**Technical Details & Requirements**  
+- Target Operating System: macOS 14.0 (Sonoma) or later.  
+- Architecture: Universal Mac app for Apple Silicon and Intel Macs.  
+- System Constraints & Limit: Supports up to 100 PDF files in a single task.  
+- Compression Options: Balanced and Smallest PDF. Local Stitch uses PDFKit-based file size reduction and measures real temporary output before saving.  
+- Under the Hood: Built as a native SwiftUI macOS app using PDFKit for PDF parsing, unlocking, merging, writing, and file size reduction; CryptoKit for SHA-256 hashing; and AppKit panels for native file selection and save workflows.  
+- Privacy Model: Uses only files selected by the user. The app performs PDF inspection, password handling, hashing, source summary generation, merging, and file size reduction locally, then writes output PDFs only to the destination the user chooses.  
+
+**Artifact Assets**  
+- Source Code: [https://github.com/moeed80/Local-Stitch](https://github.com/moeed80/Local-Stitch)  
+- Direct Application Download:   
+[Download Local Stitch (.dmg)](https://github.com/moeed80/Local-Stitch/releases/download/v1.0.0/Local-Stitch-1.0.dmg)  
+
+**Caveats & Fine Print**  
+- License: Distributed entirely under the permissive MIT License. You are free to inspect, tweak, or break the code as you see fit.  
+- Privacy: This software is published by [Mangla & Co LLC](/project/mangla/) and follows the shared [privacy policy](/privacy/). It handles document processing locally, does not collect analytics, and does not upload your PDFs.  
+- Compression Note: File size reduction works best on PDFs with reducible image content. Already optimized, mostly text, or vector-heavy PDFs may not shrink much.  
+- Disclaimer: This software is provided "as is", without warranty of any kind.  
+- Bugs & Grievances: If the application decides to misbehave or throws an unexpected error, please kindly submit a bug report via the [Contact Form](/contact/) or email [developer@moeed.com](mailto:developer@moeed.com). Please do not send passwords, private keys, financial records, legal records, or other sensitive files unless they are necessary for support and you are comfortable sharing them.
