@@ -11,6 +11,8 @@ tags:
 
 I have always loved the Pebble because it understands what I want from a watch.
 
+[Install Squintless on the Rebble Store](https://apps.rebble.io/en_US/application/6a5a328955030a00092d829f).
+
 ![Squintless Watch Face Banner](/assets/images/projects/squintless-square-banner.png)
 
 It has an always-on screen, physical buttons, an uncluttered interface and a battery that lasts for weeks. It does a handful of things and does them well. Most importantly, it does not demand much attention. I can put it on, use it when I need it and otherwise forget that it is there.
