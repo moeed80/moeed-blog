@@ -3,12 +3,12 @@ layout: article
 title: "Squintless: A Pebble Watch Face for Aging Eyes"
 date: 2026-07-17
 excerpt: "An accessibility-first Pebble Time 2 watch face that removes the usual clutter so the time is readable instantly, even when near vision is not cooperating."
-image: "/assets/images/projects/squintless-banner-720x320.png"
+image: "/assets/images/projects/squintless-square-banner.png"
 tags:
   - projects
 ---
 
-> **Draft for review.** The feature graphic should be copied to `src/assets/images/projects/squintless-banner-720x320.png` when this post is approved for publishing.
+> **Draft for review.** The feature graphic should be copied to `src/assets/images/projects/squintless-square-banner.png` when this post is approved for publishing.
 
 Most watch faces treat the small rectangle on your wrist as an opportunity to become a tiny dashboard. The date is there. The weather is there. Steps, heart rate, seconds, icons, status indicators, and a handful of decorative complications all elbow one another for attention.
 

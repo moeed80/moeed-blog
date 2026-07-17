@@ -3,7 +3,7 @@ layout: article
 title: "Squintless: A Pebble Watch Face for Eyes Over 40"
 date: 2026-07-17
 excerpt: "An accessibility-first Pebble Time 2 watch face that makes the time large, clear and readable without unnecessary clutter."
-image: "/assets/images/projects/squintless-banner-720x320.png"
+image: "/assets/images/projects/squintless-square-banner.png"
 permalink: "/projects/squintless/index.html"
 tags:
   - projects
@@ -11,7 +11,7 @@ tags:
 
 I have always loved the Pebble because it understands what I want from a watch.
 
-![Squintless Watch Face Banner](/assets/images/projects/squintless-banner-720x320.png)
+![Squintless Watch Face Banner](/assets/images/projects/squintless-square-banner.png)
 
 It has an always-on screen, physical buttons, an uncluttered interface and a battery that lasts for weeks. It does a handful of things and does them well. Most importantly, it does not demand much attention. I can put it on, use it when I need it and otherwise forget that it is there.
 
