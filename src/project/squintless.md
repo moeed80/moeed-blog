@@ -11,6 +11,8 @@ tags:
 
 I have always loved the Pebble because it understands what I want from a watch.
 
+![Squintless Watch Face Banner](/assets/images/projects/squintless-banner-720x320.png)
+
 It has an always-on screen, physical buttons, an uncluttered interface and a battery that lasts for weeks. It does a handful of things and does them well. Most importantly, it does not demand much attention. I can put it on, use it when I need it and otherwise forget that it is there.
 
 I backed the original Pebble when it launched on Kickstarter in 2012. It was one of those rare technology products that immediately made sense to me. I loved that first watch and bought each successive version until Pebble was acquired and the company stopped making them.
